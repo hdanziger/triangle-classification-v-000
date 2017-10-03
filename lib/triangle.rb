@@ -13,9 +13,8 @@ class Triangle
     else
       TriangleError
   end
+end
 
   class TriangleError < StandardError
   end
-
-
 end
