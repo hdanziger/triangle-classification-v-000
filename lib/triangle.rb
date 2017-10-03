@@ -25,6 +25,9 @@ class Triangle
     [side1, side2, side3].each do |scalene|
       scalene << false if s <=0
       raise TriangleError if triangle.include?(false)
+    end
+  end
+end
 
 
   class TriangleError < StandardError
