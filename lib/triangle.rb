@@ -7,9 +7,11 @@ class Triangle
   end
 
   def kind
-    :equilateral
-    :isosceles
-    :scalene
+    types-of-triangles(equilateral, isosceles, scalene)
+    if types-of-triangles.valid?
+      true
+    else
+      TriangleError
   end
 
   class TriangleError < StandardError
