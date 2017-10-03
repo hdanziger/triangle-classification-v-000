@@ -27,7 +27,6 @@ class Triangle
       raise TriangleError if triangle.include?(false)
     end
   end
-end
 
 
   class TriangleError < StandardError
