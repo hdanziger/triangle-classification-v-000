@@ -1,5 +1,7 @@
 class Triangle
   # write code here
+  attr_accessor :side1, :side2, :side3
+
   def initialize(side1, side2, side3)
     @side1 = side1
     @side2 = side2
@@ -7,11 +9,14 @@ class Triangle
   end
 
   def kind
-    types-of-triangles(equilateral, isosceles, scalene)
-    if types-of-triangles.valid?
-      true
+    if side1 == side2 && side2 == side3 && side1 == side3
+      equilateral
     else
-      TriangleError
+      side1 == side2 || side2 == side3 || side1 == side3
+      isosceles
+    elsif
+      side1 != side2 && side2 != side3
+      scalene
   end
 end
 
