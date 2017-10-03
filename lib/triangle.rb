@@ -12,8 +12,7 @@ class Triangle
     validate_triangle
     if side1 == side2 && side2 == side3
       :equilateral
-    elsif
-      side1 == side2 || side2 == side3 || side1 == side3
+    elsif side1 == side2 || side2 == side3 || side1 == side3
       :isosceles
     else
       :scalene
@@ -21,9 +20,9 @@ class Triangle
   end
 
   def validate_triangle
-    triangle = [(side1 + side2 > side3), (side2 + side3 > side1), (side1 +side3 > side2)]
-    [side1, side2, side3].each {|scalene| triangle << false if scalene <= 0}
-      raise TriangleError if triangle.include?(false)
+       real_triangle = [(side1 + side2 > side3), (side1 + side3 > side2), (side2 + side3 > side1)]
+       [side1, side2, side3].each { |scalene| real_triangle << false if scalene <= 0 }
+       raise TriangleError if real_triangle.include?(false)
     end
   end
 
