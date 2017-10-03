@@ -6,4 +6,14 @@ class Triangle
     @side3 = side3
   end
 
+  def kind
+    :equilateral
+    :isosceles
+    :scalene
+  end
+
+  class TriangleError < StandardError
+  end
+
+
 end
