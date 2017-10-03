@@ -23,7 +23,7 @@ class Triangle
   def validate_triangle
     triangle = [(side1 + side2 > side3), (side2 + side3 > side1), (side1 +side3 > side2)]
     [side1, side2, side3].each do |scalene|
-      scalene << false if s <=0
+      triangle << false if scalene <=0
       raise TriangleError if triangle.include?(false)
     end
   end
