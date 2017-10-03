@@ -9,14 +9,14 @@ class Triangle
   end
 
   def kind
-    if side1 == side2 && side2 == side3 && side1 == side3
-      equilateral
+    validate_triangle
+    if side1 == side2 && side2 == side3
+      :equilateral
     elsif
       side1 == side2 || side2 == side3 || side1 == side3
-      isosceles
+      :isosceles
     else
-      side1 != side2 && side2 != side3
-      scalene
+      :scalene
     end
   end
 
